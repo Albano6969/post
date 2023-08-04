@@ -2,9 +2,9 @@
 @section('content')
     <h1>Todos las Categorias</h1>
 
-    <a href="{{route('category.create')}}">Crear</a>
+    <a class="btn btn-success my-2" href="{{route('category.create')}}">Crear</a>
 
-    <table>
+    <table class="table mb-3">
         <thead>
             <tr>
                 <th>
@@ -21,12 +21,12 @@
                 </td>
                 
                 <td>
-                    <a href="{{route('category.edit', $item)}}">Editar</a>
-                    <a href="{{route('category.show', $item)}}">Ver</a>
+                    <a class ="btn btn-primary my-2" href="{{route('category.edit', $item)}}">Editar</a>
+                    <a class ="btn btn-primary my-2" href="{{route('category.show', $item)}}">Ver</a>
                     <form action="{{route('category.destroy',$item)}}" method="post">
                         @csrf
                         @method("DELETE")
-                    <button type="submit">Eliminar</button>
+                    <button class ="btn btn-danger my-2" type="submit">Eliminar</button>
                     </form>
                     
                 </td>
